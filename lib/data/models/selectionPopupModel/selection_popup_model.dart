@@ -4,8 +4,12 @@
 // ignore_for_file: must_be_immutable
 class SelectionPopupModel {
   SelectionPopupModel(
-    {this.id, required this.title, this.value, this.isSelected = false}
-  );
+    {
+      this.id,
+      required this.title,
+      this.value,
+      this.isSelected = false
+    });
 
   int? id;
 

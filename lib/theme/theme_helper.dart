@@ -72,11 +72,27 @@ class ThemeHelper {
           padding: EdgeInsets.zero,
         ),        
       ),
+      checkboxTheme: CheckboxThemeData(
+        fillColor: MaterialStateColor.resolveWith((states) {
+          if (states.contains(MaterialState.selected)) {
+            return colorScheme.primary;
+          }
+          return Colors.transparent;
+        }),
+        side: BorderSide(
+          color: appTheme.blueGray100,
+          width: 1,
+        ),
+        visualDensity: const VisualDensity(
+          vertical: -4,
+          horizontal: -4,
+        ),
+      ),
       dividerTheme: DividerThemeData(
         thickness: 1,
         space: 1,
         color: appTheme.blueGray100.withOpacity(0.85),
-      )
+      ),
     );
   }
 
@@ -90,11 +106,17 @@ class ThemeHelper {
 /// Class containing the supported text theme styles.
 class TextThemes {
   static TextTheme textTheme(ColorScheme colorScheme) => TextTheme(
+        // bodyLarge: TextStyle(
+        //   color: appTheme.blueGray400,
+        //   fontSize: 19.fSize,
+        //   fontFamily: 'Poppins',
+        //   fontWeight: FontWeight.w300,
+        // ),
         bodyLarge: TextStyle(
-          color: appTheme.blueGray400,
-          fontSize: 19.fSize,
+          color: colorScheme.onPrimaryContainer.withOpacity(1),
+          fontSize: 17.fSize,
           fontFamily: 'Poppins',
-          fontWeight: FontWeight.w300,
+          fontWeight: FontWeight.w400,
         ),
         bodyMedium: TextStyle(
           color: colorScheme.onPrimaryContainer.withOpacity(1),
@@ -104,9 +126,9 @@ class TextThemes {
         ),
         bodySmall: TextStyle(
           color: appTheme.blueGray400,
-          fontSize: 12.fSize,
+          fontSize: 8.fSize,
           fontFamily: 'Poppins',
-          fontWeight: FontWeight.w300,
+          fontWeight: FontWeight.w400,
         ),
         displaySmall: TextStyle(
           color: appTheme.whiteA700,
@@ -116,7 +138,7 @@ class TextThemes {
         ),
         headlineLarge: TextStyle(
           color: colorScheme.onPrimaryContainer.withOpacity(1),
-          fontSize: 20.fSize,
+          fontSize: 30.fSize,
           fontFamily: 'Poppins',
           fontWeight: FontWeight.w600,
         ),

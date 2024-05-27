@@ -18,6 +18,9 @@ import '../pages/welcome_pages.dart';
 import '../pages/changepass_page.dart';
 import '../pages/register_page.dart';
 import '../pages/login_page.dart';
+import '../pages/daftar_transaksi_screen.dart';
+import '../pages/chat_page.dart';
+import '../pages/setting_page.dart';
 
 // ignore_for_file: must_be_immutable
 class AppRoutes {
@@ -31,6 +34,8 @@ class AppRoutes {
   static const String appNavigationScreen = '/app_navigation_screen';
 
   static const String daftarTransaksiScreen = '/daftar_transaksi';
+  static const String chatAdminScreen = '/chat';
+  static const String settingScreen = '/setting';
 
   static Map<String, WidgetBuilder> routes = {
     // splashScreen: (context) => SplashScreen(),
@@ -38,7 +43,9 @@ class AppRoutes {
     // forgotPasswordScreen: (context) => ForgotPasswordScreen(),
     // appNavigationScreen: (context) => AppNavigationScreen(),
 
-    daftarTransaksiScreen: (context) => ,
+    settingScreen: (context) => SettingPage(),
+    chatAdminScreen: (context) => ChatPage(),
+    daftarTransaksiScreen: (context) => DaftarTransaksiScreen(),
     signInOneScreen: (context) => SignUpPage(),
     signUpScreen: (context) => LoginPage(),
     changePasswordScreen: (context) => ChangePasswordScreen(),

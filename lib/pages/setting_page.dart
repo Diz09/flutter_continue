@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../core/app_export.dart';
-import '../theme/custom_button_style.dart';
-import '../widgets/custom_elevated_button.dart';
+import '../../core/app_export.dart';
+import '../../theme/custom_button_style.dart';
+import '../../widgets/custom_elevated_button.dart';
 
 class SettingPage extends StatelessWidget {
   const SettingPage({Key? key})
@@ -40,7 +40,7 @@ class SettingPage extends StatelessWidget {
           SizedBox(height: 2.v),
           Text(
             "Pengaturan",
-            style: CustomTextStyles.titleLargeOnPrimaryContainer,
+            style: CustomTextStyles.titleLargeOnPrimaryContainer_1,
           ),
           SizedBox(height: 12.v),
           Row(
@@ -182,102 +182,106 @@ class SettingPage extends StatelessWidget {
             ),
           ),
           SizedBox(height: 19.v),
-          Align(
-            alignment: Alignment.centerRight,
-            child: Padding(
-              padding: EdgeInsets.only(left: 25.h),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    height: 85.v,
-                    width: 246.h,
-                    margin: EdgeInsets.only(bottom: 15.v),
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        CustomImageView(
-                          imagePath: ImageConstant.imageNotFound,
-                          height: 55.adaptSize,
-                          width: 55.adaptSize,
-                          radius: BorderRadius.circular(7.h),
-                          alignment: Alignment.centerLeft,
-                          margin: EdgeInsets.only(left: 15.h),
-                        ),
-                        Align(
-                          alignment: Alignment.center,
-                          child: Container(
-                            padding: EdgeInsets.symmetric(
-                              horizontal: 70.h,
-                              vertical: 14.v,
-                            ),
-                            decoration: AppDecoration.outlineBlueGray100.copyWith(
-                              borderRadius: BorderRadiusStyle.roundedBorder7,
-                            ),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Align(
-                                  alignment: Alignment.centerRight,
-                                  child: Text(
-                                    "Sedang dikirim",
-                                    style: CustomTextStyles.labelLargeDeeporangeA70012,
-                                  ),
-                                ),
-                                SizedBox(height: 18.v),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 8.h),
-                                  child: Text(
-                                    "Kue Matcha",
-                                    style: CustomTextStyles.bodySmallOnPrimaryContainerRegular,
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      onTapColumnTransaksi(context);
-                    },
-                    child: Container(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 7.h,
-                        vertical: 15.v,
-                      ),
-                      decoration: AppDecoration.outlineBlueGray100.copyWith(
-                        borderRadius: BorderRadiusStyle.roundedBorder7,
-                      ),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          SizedBox(height: 21.v)
-                          Text(
-                            "Transaksi Lainnya",
-                            style: CustomTextStyles.bodySmallOnPrimaryContainerRegular,
-                          ),
-                          SizedBox(height: 9.v),
-                          Padding(
-                            padding: EdgeInsets.only(left: 3.h),
-                            child: Text(
-                              "Lihat Semua",
-                              style: CustomTextStyles.labelLargePrimary,
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
+          // Align(
+          //   alignment: Alignment.centerRight,
+          //   child: Padding(
+          //     padding: EdgeInsets.only(left: 25.h),
+          //     child: Row(
+          //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //       crossAxisAlignment: CrossAxisAlignment.start,
+          //       children: [
+          //         Container(
+          //           height: 85.v,
+          //           width: 246.h,
+          //           margin: EdgeInsets.only(bottom: 15.v),
+          //           child: Stack(
+          //             alignment: Alignment.center,
+          //             children: [
+          //               CustomImageView(
+          //                 imagePath: ImageConstant.imageNotFound,
+          //                 height: 55.adaptSize,
+          //                 width: 55.adaptSize,
+          //                 radius: BorderRadius.circular(7.h),
+          //                 alignment: Alignment.centerLeft,
+          //                 margin: EdgeInsets.only(left: 15.h),
+          //               ),
+          //               Align(
+          //                 alignment: Alignment.center,
+          //                 child: Container(
+          //                   padding: EdgeInsets.symmetric(
+          //                     horizontal: 70.h,
+          //                     vertical: 14.v,
+          //                   ),
+          //                   decoration: AppDecoration.outlineBlueGray100
+          //                       .copyWith(
+          //                     borderRadius: BorderRadiusStyle.roundedBorder7,
+          //                   ),
+          //                   child: Column(
+          //                     mainAxisSize: MainAxisSize.min,
+          //                     crossAxisAlignment: CrossAxisAlignment.start,
+          //                     children: [
+          //                       Align(
+          //                         alignment: Alignment.centerRight,
+          //                         child: Text(
+          //                           "Sedang dikirim",
+          //                           style: CustomTextStyles
+          //                               .labelLargeDeeporangeA70012,
+          //                         ),
+          //                       ),
+          //                       SizedBox(height: 18.v),
+          //                       Padding(
+          //                         padding: EdgeInsets.only(left: 8.h),
+          //                         child: Text(
+          //                           "Kue Matcha",
+          //                           style: CustomTextStyles
+          //                               .bodySmallOnPrimaryContainerRegular,
+          //                         ),
+          //                       )
+          //                     ],
+          //                   ),
+          //                 ),
+          //               )
+          //             ],
+          //           ),
+          //         ),
+          //         GestureDetector(
+          //           onTap: () {
+          //             onTapColumnTransaksi(context);
+          //           },
+          //           child: Container(
+          //             padding: EdgeInsets.symmetric(
+          //               horizontal: 7.h,
+          //               vertical: 15.v,
+          //             ),
+          //             decoration: AppDecoration.outlineBlueGray100.copyWith(
+          //               borderRadius: BorderRadiusStyle.roundedBorder7,
+          //             ),
+          //             child: Column(
+          //               mainAxisSize: MainAxisSize.min,
+          //               crossAxisAlignment: CrossAxisAlignment.start,
+          //               children: [
+          //                 SizedBox(height: 21.v),
+          //                 Text(
+          //                   "Transaksi Lainnya",
+          //                   style: CustomTextStyles
+          //                       .bodySmallOnPrimaryContainerRegular,
+          //                 ),
+          //                 SizedBox(height: 9.v),
+          //                 Padding(
+          //                   padding: EdgeInsets.only(left: 3.h),
+          //                   child: Text(
+          //                     "Lihat Semua",
+          //                     style: CustomTextStyles.labelLargePrimary,
+          //                   ),
+          //                 )
+          //               ],
+          //             ),
+          //           ),
+          //         )
+          //       ],
+          //     ),
+          //   ),
+          // ),
           SizedBox(height: 24.v),
           Padding(
             padding: EdgeInsets.only(left: 25.h),
@@ -304,20 +308,21 @@ class SettingPage extends StatelessWidget {
         ],
       ),
     );
+  }
 
-    // Navigasi to daftar transaksi
-    onTapImgArrowRight(BuildContext context) {
-      Navigator.pushNamed(context, AppRoutes.daftarTransaksiScreen);
-    }
+  // Navigasi to daftar transaksi
+  onTapImgArrowRight(BuildContext context) {
+    Navigator.pushNamed(context, AppRoutes.daftarTransaksiScreen);
+  }
 
-    onTapColumnTransaksi(BuildContext context) {
-      Navigator.pushNamed(context, AppRoutes.daftarTransaksiScreen);
-    }
+  onTapColumnTransaksi(BuildContext context) {
+    Navigator.pushNamed(context, AppRoutes.daftarTransaksiScreen);
+  }
 
-    // Navigasi to chat
-    onTapImgSettingSone(BuildContext context) {
-      Navigator.pushNamed(context, AppRoutes.chatAdminScreen);
-    }
+  // Navigasi to chat
+  onTapImgSettingSone(BuildContext context) {
+    Navigator.pushNamed(context, AppRoutes.chatAdminScreen);
 
   }
+
 }
